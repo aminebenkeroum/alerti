@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "spaces",
+  "info": {
+    "name": "Space"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
