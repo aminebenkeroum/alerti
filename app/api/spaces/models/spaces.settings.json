@@ -1,8 +1,8 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "spaces",
   "info": {
-    "name": "Space"
+    "name": "Spaces"
   },
   "options": {
     "increments": true,
@@ -12,11 +12,15 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
       "type": "string"
+    },
+    "creator": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "post": {
+      "via": "space",
+      "model": "posts"
     }
   }
 }

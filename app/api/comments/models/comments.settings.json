@@ -1,8 +1,8 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "comments",
   "info": {
-    "name": "Comment"
+    "name": "Comments"
   },
   "options": {
     "increments": true,
@@ -16,19 +16,12 @@
     },
     "creator": {
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "comments"
     },
-    "media": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+    "likes": {
+      "via": "comment",
+      "collection": "likes"
     }
   }
 }

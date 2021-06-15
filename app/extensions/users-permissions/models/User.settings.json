@@ -67,6 +67,18 @@
     },
     "title": {
       "type": "string"
+    },
+    "posts": {
+      "via": "creator",
+      "collection": "posts"
+    },
+    "comments": {
+      "via": "creator",
+      "collection": "comments"
+    },
+    "likes": {
+      "via": "creator",
+      "collection": "likes"
     }
   }
 }

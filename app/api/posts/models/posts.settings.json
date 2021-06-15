@@ -1,8 +1,8 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "posts",
   "info": {
-    "name": "Post",
+    "name": "Posts",
     "description": ""
   },
   "options": {
@@ -30,8 +30,8 @@
       "required": false,
       "pluginOptions": {}
     },
-    "attachment": {
-      "model": "file",
+    "attachments": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -41,6 +41,15 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "space": {
+      "model": "spaces",
+      "via": "post"
+    },
+    "creator": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "posts"
     }
   }
 }
